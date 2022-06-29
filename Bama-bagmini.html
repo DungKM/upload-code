@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Bama-bagmini.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function () {
+            var index = 0;
+            $('#next').click(function () {
+                index++
+                if (index > 2) {
+                    index = 0
+                }
+                $('#anh').fadeOut(1000, function () {
+                    $('#anh').attr("src", "anh/" + index + '.jpg')
+                    $('#anh').fadeIn()
+                })
+            })
+            var interval;
+            var timer = function () {
+                interval = setInterval(function () {
+                    $("#next").click();
+                }, 5000);
+            };
+            timer()
+            $("#f1").mouseenter(function () {
+                $("#f1").attr({ "src": 'Minibag/mini2.jpg' })
+            })
+            $("#f1").mouseleave(function () {
+                $("#f1").attr({ "src": 'Minibag/mini1.jpg' })
+            })
+            
+            $("#f2").mouseenter(function () {
+                $("#f2").attr({ "src": 'Minibag/mini33.jpg' })
+            })
+            $("#f2").mouseleave(function () {
+                $("#f2").attr({ "src": 'Minibag/mini3.jpg' })
+            })
+            $("#f3").mouseenter(function () {
+                $("#f3").attr({ "src": 'Minibag/mini44.jpg' })
+            })
+            $("#f3").mouseleave(function () {
+                $("#f3").attr({ "src": 'Minibag/mini4.jpg' })
+            })
+            $("#f4").mouseenter(function () {
+                $("#f4").attr({ "src": 'Minibag/mini55.jpg' })
+            })
+            $("#f4").mouseleave(function () {
+                $("#f4").attr({ "src": 'Minibag/mini5.jpg' })
+            })
+            $("#f5").mouseenter(function () {
+                $("#f5").attr({ "src": 'Minibag/mini66.jpg' })
+            })
+            $("#f5").mouseleave(function () {
+                $("#f5").attr({ "src": 'Minibag/mini6.jpg' })
+            })
+            $("#f6").mouseenter(function () {
+                $("#f6").attr({ "src": 'Minibag/mini77.jpg' })
+            })
+            $("#f6").mouseleave(function () {
+                $("#f6").attr({ "src": 'Minibag/mini7.jpg' })
+            })
+            $("#f7").mouseenter(function () {
+                $("#f7").attr({ "src": 'Minibag/mini88.jpg' })
+            })
+            $("#f7").mouseleave(function () {
+                $("#f7").attr({ "src": 'Minibag/mini8.jpg' })
+            })
+            $("#f8").mouseenter(function () {
+                $("#f8").attr({ "src": 'Minibag/mini99.jpg' })
+            })
+            $("#f8").mouseleave(function () {
+                $("#f8").attr({ "src": 'Minibag/mini9.jpg' })
+            })
+            $("#f9").mouseenter(function () {
+                $("#f9").attr({ "src": 'Minibag/mini100.jpg' })
+            })
+            $("#f9").mouseleave(function () {
+                $("#f9").attr({ "src": 'Minibag/mini10.jpg' })
+            })
+            $("#f10").mouseenter(function () {
+                $("#f10").attr({ "src": 'Minibag/mini111.jpg' })
+            })
+            $("#f10").mouseleave(function () {
+                $("#f10").attr({ "src": 'Minibag/mini11.jpg' })
+            })
+            $("#f11").mouseenter(function () {
+                $("#f11").attr({ "src": 'Minibag/mini122.jpg' })
+            })
+            $("#f11").mouseleave(function () {
+                $("#f11").attr({ "src": 'Minibag/mini12.jpg' })
+            })
+            $("#f12").mouseenter(function () {
+                $("#f12").attr({ "src": 'Minibag/mini133.jpg' })
+            })
+            $("#f12").mouseleave(function () {
+                $("#f12").attr({ "src": 'Minibag/mini13.jpg' })
+            })
+            $("#flip").mouseenter(function () {
+                $(".sub-menu").show("slow");
+                $("#flip").mouseleave(function () {
+                    $(".sub-menu").hide();
+                });
+            })
+        })
+
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-left">
+            <img src="pic/logo_header_icon-hihi.jpg" alt="">
+        </div>
+
+        <h2 id="logo-main">KEYMAGIC</h2>
+
+
+        <div class="search">
+            <div class="form-group">
+                <input type="text" class="form-input" placeholder="Tìm Kiếm"><i class='bx bx-search'></i>
+            </div>
+
+
+        </div>
+    </header>
+    <nav>
+        <ul id="main-menu">
+            <li id="drip"><a href="Bama.html">ALL</a></li>
+            <li id="drip"><a href="">BACKPACKS</a></li>
+            <li id="drip"> <a href="Bama-bagmini.html" style="background-color: #FFFF;color: #19539F;">MINI BAGS</a></li>
+            <li id="flip"><a href="">ACCESSORIS</a>
+                <ul class="sub-menu">
+                    <li><a href="#">HOODIES</a></li>
+                    <li><a href="#">T-SHIRT</a></li>
+                    <li><a href="#">ACCESSORIS</a></li>
+                </ul>
+            </li>
+            <li id="drip"><a href="">SALE</a></li>
+            <li  id="drip"><a href="">TRA CỨU ĐƠN HÀNG</a></li>
+
+        </ul>
+    </nav>
+    <div class="Banner">
+        <img src="anh/0.jpg" alt="" id="anh">
+        <button id="next" style="display: none;"></button>
+
+    </div>
+    <h1 class="Tilte">
+        MINI BAGS
+    </h1>
+
+    <div class="big-list-product">
+        <div class="list">
+            <img src="Minibag/mini1.jpg" alt="" id="f1">
+            <p class="buy">XEM NHANH</p>
+            <p class="title-product">
+                MODERN BACKPACK - BLACK
+            </p>
+            <p class="product-price">
+                580.000 đ
+            </p>
+        </div>
+        <div class="list">
+            <img src="Minibag/mini3.jpg" alt="" id="f2">
+            <p class="buy">XEM NHANH</p>
+            <p class="title-product">
+                MODERN BACKPACK - BLACK
+            </p>
+            <p class="product-price">
+                580.000 đ
+            </p>
+        </div>
+        <div class="list">
+            <img src="Minibag/mini4.jpg" alt="" id="f3">
+            <p class="buy">XEM NHANH</p>
+            <p class="title-product">
+                MODERN BACKPACK - BLACK
+            </p>
+            <p class="product-price">
+                580.000 đ
+            </p>
+        </div>
+        <div class="list">
+            <img src="Minibag/mini5.jpg" alt="" id="f4">
+            <p class="buy">XEM NHANH</p>
+            <p class="title-product">
+                MODERN BACKPACK - BLACK
+            </p>
+            <p class="product-price">
+                580.000 đ
+            </p>
+        </div>
+        <div class="list">
+            <img src="Minibag/mini6.jpg" alt="" id="f5">
+            <p class="buy">XEM NHANH</p>
+            <p class="title-product">
+                MODERN BACKPACK - BLACK
+            </p>
+            <p class="product-price">
+                580.000 đ
+            </p>
+        </div>
+        <div class="list">
+            <img src="Minibag/mini7.jpg" alt="" id="f6">
+            <p class="buy">XEM NHANH</p>
+            <p class="title-product">
+                MODERN BACKPACK - BLACK
+            </p>
+            <p class="product-price">
+                580.000 đ
+            </p>
+        </div>
+        <div class="list">
+            <img src="Minibag/mini8.jpg" alt="" id="f7">
+            <p class="buy">XEM NHANH</p>
+            <p class="title-product">
+                MODERN BACKPACK - BLACK
+            </p>
+            <p class="product-price">
+                580.000 đ
+            </p>
+        </div>
+        <div class="list">
+            <img src="Minibag/mini9.jpg" alt="" id="f8">
+            <p class="buy">XEM NHANH</p>
+            <p class="title-product">
+                MODERN BACKPACK - BLACK
+            </p>
+            <p class="product-price">
+                580.000 đ
+            </p>
+
+        </div>
+        <div class="list">
+            <img src="Minibag/mini10.jpg" alt="" id="f9">
+            <p class="buy">XEM NHANH</p>
+            <p class="title-product">
+                MODERN BACKPACK - BLACK
+            </p>
+            <p class="product-price">
+                580.000 đ
+            </p>
+
+
+        </div>
+        <div class="list">
+            <img src="Minibag/mini11.jpg" alt="" id="f10">
+            <p class="buy">XEM NHANH</p>
+            <p class="title-product">
+                MODERN BACKPACK - BLACK
+            </p>
+            <p class="product-price">
+                580.000 đ
+            </p>
+
+        </div>
+        <div class="list">
+            <img src="Minibag/mini12.jpg" alt="" id="f11">
+            <p class="buy">XEM NHANH</p>
+            <p class="title-product">
+                MODERN BACKPACK - BLACK
+            </p>
+            <p class="product-price">
+                580.000 đ
+            </p>
+        </div>
+        <div class="list">
+            <img src="Minibag/mini13.jpg" alt="" id="f12">
+            <p class="buy">XEM NHANH</p>
+            <p class="title-product">
+                MODERN BACKPACK - BLACK
+            </p>
+            <p class="product-price">
+                580.000 đ
+            </p>
+
+        </div>
+    </div>
+
+    <div class="footer-one">
+        <h2 class="footer-one-product">KEYMAGIC</h2>
+        <p class="phone"><a href="">BY KEYMAGIC</a><a href="">PHONE</a></p>
+        <p class="fi"><i class='bx bxl-facebook'></i><i class='bx bxl-instagram'></i></p>
+        <br>
+        <br>
+        <br>
+    </div>
+
+    <div class="product-help">
+        <div class="phone-help"><i class='bx bx-phone'></i><a href="">Hỗ trợ</a><a href="">/</a><a href="">Mua hàng :
+            </a> <a href="" style="color:red">0355797746</a></div>
+    </div>
+    <div class="footer">
+        <div class="hi">
+            <h2>Giới thiệu</h2>
+            <p>Hi.
+            </p>
+        </div>
+        <div class="lienket">
+            <h2>Liên kết</h2>
+            <p><a href="">Tìm kiếm</a></p>
+            <p><a href="">Giới thiệu</a></p>
+            <p><a href="">Chính sách đổi trả</a></p>
+            <p><a href="">Chính sách bảo mật</a></p>
+            <p><a href="">Điều khoản dịch vụ</a></p>
+        </div>
+        <div class="thongtin">
+            <h2>Thông tin liên hệ</h2>
+            <p><i class='bx bxs-map'></i><a href="">TP.HCM</a></p>
+            <p><i class='bx bxs-phone-call'></i><a href="">0355797746</a></p>
+            <p><i class='bx bxs-camera-home'></i><a href="">coming soon</a></p>
+            <p><i class='bx bx-send'></i><a href="">dunghaph19791@fpt.edu.vn</a></p>
+        </div>
+        <div class="fanpage">
+            <h2>Fanpage</h2>
+            <p><img src="anh/fanpage.jpg" alt=""></p>
+            <p class="logo">
+                KEYMAGIC
+            </p>
+            <p class="fi1"><i class='bx bxl-facebook'></i>www.facebook.com/keymagic/</p>
+            <p class="fi2"><i class='bx bxl-instagram'></i>www.instagram.com/keymagic/</p>
+        </div>
+    </div>
+    <div class="footer-end">
+        <p>Copyright © 2022 Outerity. Powered by Haravan</p>
+    </div>
+</body>
+
+</html>
